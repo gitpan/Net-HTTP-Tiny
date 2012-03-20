@@ -8,7 +8,6 @@ Module::Build->subclass(code => q{
 	sub ACTION_testauthor { $_[0]->generic_test(type => "author") }
 })->new(
 	module_name => "Net::HTTP::Tiny",
-	dist_version => "0.000",
 	license => "perl",
 	configure_requires => {
 		"Module::Build" => 0,

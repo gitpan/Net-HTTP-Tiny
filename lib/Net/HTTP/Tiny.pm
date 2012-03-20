@@ -28,7 +28,7 @@ use strict;
 
 use Carp qw(croak);
 
-our $VERSION = "0.000";
+our $VERSION = "0.001";
 
 # Set up superclass manually, rather than via "parent", to avoid non-core
 # dependency.
@@ -89,7 +89,7 @@ sub _croak($) { croak "HTTP error: $_[0]" }
 my $safechar_rx = qr/[0-9A-Za-z\-\.\_\~\!\$\&\'\(\)\*\+\,\;\=]/;
 my $hexpair_rx = qr/\%[0-9A-Fa-f]{2}/;
 
-my $d8_rx = qr/[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]/;
+my $d8_rx = qr/25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9]/;
 my $ipv4_address_rx = qr/$d8_rx\.$d8_rx\.$d8_rx\.$d8_rx/o;
 
 my $h16_rx = qr/[0-9A-Fa-f]{1,4}/;
